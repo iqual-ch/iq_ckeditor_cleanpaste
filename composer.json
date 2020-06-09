@@ -1,0 +1,16 @@
+{
+  "name": "iqual/iq_ckeditor_cleanpaste",
+  "description": "CKEditor plugin that removes formatting after paste",
+  "type": "drupal-custom-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/iqual-ch/iq_ckeditor_cleanpaste",
+  "support": {
+    "issues": "https://github.com/iqual-ch/iq_ckeditor_cleanpaste/issues",
+    "source": "https://github.com/iqual-ch/iq_ckeditor_cleanpaste"
+  },
+  "require": {
+    "drupal/core": ">=8.6"
+  }
+}
