@@ -37,19 +37,11 @@
               endNode = ckeDocument.getBody().getChild(ckeDocument.getBody().getChildren().count() - 1),
               currentNode = startNode;
 
-            // Loop through all nodes
-            while (currentNode) {
+            // Loop through all nodes which are dom elements
+            while (currentNode && currentNode.type == CKEDITOR.NODE_ELEMENT) {
               // If we have reached the end of the selection, stop looping.
-              if (currentNode.equals(endNode)){
+              if (currentNode.equals(endNode)) {
                 break;
-              }
-
-              // Check if current node is an HTML element or just plain text.
-              // If it's plain text, convert it to a p tag
-              if (currentNode.type == 3) {
-                var currentNodeNew = ckeDocument.createElement('p');
-                currentNodeNew.setText(currentNode.getText());
-                currentNode = currentNodeNew;
               }
 
               var nextNode = currentNode.getNextSourceNode(false, CKEDITOR.NODE_ELEMENT),
