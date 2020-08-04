@@ -44,6 +44,14 @@
                 break;
               }
 
+              // Check if current node is an HTML element or just plain text.
+              // If it's plain text, convert it to a p tag
+              if (currentNode.type == 3) {
+                var currentNodeNew = ckeDocument.createElement('p');
+                currentNodeNew.setText(currentNode.getText());
+                currentNode = currentNodeNew;
+              }
+
               var nextNode = currentNode.getNextSourceNode(false, CKEDITOR.NODE_ELEMENT),
                 isFakeElement = currentNode.getName() == 'img' && currentNode.data('cke-realelement');
 
