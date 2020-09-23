@@ -45,7 +45,7 @@
               }
 
               var nextNode = currentNode.getNextSourceNode(false, CKEDITOR.NODE_ELEMENT),
-                isFakeElement = currentNode.getName() == 'img' && currentNode.data('cke-realelement');
+                isFakeElement = currentNode.hasOwnProperty('getName') && currentNode.getName() == 'img' && currentNode.data('cke-realelement');
 
               // This node must not be a fake element, and must not be read-only.
               if (!isFakeElement && filter(editor, currentNode)) {
