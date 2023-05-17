@@ -21,7 +21,7 @@ class CleanPaste extends CKEditorPluginBase implements CKEditorPluginContextualI
    * {@inheritdoc}
    */
   public function getFile() {
-    return drupal_get_path('module', 'iq_ckeditor_cleanpaste') . '/js/plugin.js';
+    return \Drupal::service('extension.list.module')->getPath('iq_ckeditor_cleanpaste') . '/js/plugin.js';
   }
 
   /**
