@@ -4,4 +4,4 @@ description: "CKEditor plugin that removes formatting after paste"
 core_version_requirement: ^9.5 || ^10
 package: CKEditor
 dependencies:
-  - drupal:ckeditor (>=5.0)
+  - drupal:ckeditor
