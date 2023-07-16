@@ -11,6 +11,7 @@
     "source": "https://github.com/iqual-ch/iq_ckeditor_cleanpaste"
   },
   "require": {
-    "php": "^8.1"
+    "php": "^8.1",
+    "drupal/core": "^9.5 || 10"
   }
 }
