@@ -1,7 +1,7 @@
 name: Clean paste CKEditor plugin
 type: module
 description: "CKEditor plugin that removes formatting after paste"
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^10 || ^11
 package: CKEditor
 dependencies:
-  - ckeditor:ckeditor
+  - drupal:ckeditor5
