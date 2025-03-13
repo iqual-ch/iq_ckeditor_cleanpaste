@@ -34,15 +34,10 @@
             // convert virtual DOM to CKEDITOR.dom.document and get first and last nodes
             var ckeDocument = new CKEDITOR.dom.document(doc);
             var startNode = ckeDocument.getBody().getChild(0),
-              endNode = ckeDocument.getBody().getChild(ckeDocument.getBody().getChildren().count() - 1),
               currentNode = startNode;
 
             // Loop through all nodes which are dom elements
             while (currentNode && currentNode.type == CKEDITOR.NODE_ELEMENT) {
-              // If we have reached the end of the selection, stop looping.
-              if (currentNode.equals(endNode)) {
-                break;
-              }
 
               var nextNode = currentNode.getNextSourceNode(false, CKEDITOR.NODE_ELEMENT),
                 isFakeElement = currentNode.hasOwnProperty('getName') && currentNode.getName() == 'img' && currentNode.data('cke-realelement');
